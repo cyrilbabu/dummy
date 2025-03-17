@@ -21,8 +21,8 @@ app.use("/users", userRoutes);
 app.use("/doctors", doctorRoutes);
 app.use("/appointments", appointmentRoutes);
 
-const port = 3000;
-app.listen(port, () => {
-  console.log(`server is listening to port ${port}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`server is listening to port ${PORT}`);
   connectDB();
 });
